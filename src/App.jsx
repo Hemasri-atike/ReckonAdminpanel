@@ -1,11 +1,12 @@
-import React from 'react'
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      <h1>hello</h1>
-    </div>
-  )
-}
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-gray-500">Loading...</div>}>
+      <Outlet />
+    </Suspense>
+  );
+};
 
-export default App
+export default App;
