@@ -1,8 +1,17 @@
+// src/components/Sidebar.jsx
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import DrawerItems from './DrawerItems';
 
 const Sidebar = ({ expand, mobileOpen, setMobileOpen, drawerWidth, miniDrawerWidth }) => {
-  const closeMobileDrawer = (open) => () => {
-    setMobileOpen(open);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname, setMobileOpen]);
+
+  const closeMobileDrawer = () => {
+    setMobileOpen(false);
   };
 
   return (
@@ -29,7 +38,7 @@ const Sidebar = ({ expand, mobileOpen, setMobileOpen, drawerWidth, miniDrawerWid
       {mobileOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={closeMobileDrawer(false)}
+          onClick={closeMobileDrawer}
         ></div>
       )}
     </>

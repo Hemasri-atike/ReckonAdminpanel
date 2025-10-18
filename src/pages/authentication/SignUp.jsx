@@ -1,21 +1,21 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+// src/pages/auth/SignUp.jsx
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from 'assets/images/Logo.png';
-import paths from 'routes/paths';
+import { Icon } from '@iconify/react';
+import paths from '../../paths';
 
-interface User {
-  [key: string]: string;
-}
+// Dummy base64-encoded transparent 92x92 PNG
+const dummyLogo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAQAAAC2b/1oAAAASElEQVR42u3PAQ0AMAgAoJ36/z+0DhAQCg4BfxDwDwH/EOAfAv4h4B8C/iHgHwL+IeAfAv4h4B8C/iHgHwL+IeAfAv4h4B8C/gJ2X8jY0gAAAABJRU5ErkJggg==';
 
 const SignUp = () => {
-  const [user, setUser] = useState<User>({ name: '', email: '', username: '', password: '' });
+  const [user, setUser] = useState({ name: '', email: '', username: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(user);
   };
@@ -23,20 +23,20 @@ const SignUp = () => {
   return (
     <div className="mx-auto flex flex-col items-center w-full max-w-md">
       <Link to="/" className="mt-6 no-underline">
-        <img src={Logo} alt="logo" className="h-[92px] w-[92px]" />
+        <img src={dummyLogo} alt="logo" className="h-[92px] w-[92px]" />
       </Link>
       <h2 className="mt-4 text-4xl font-semibold text-gray-800">Sign Up</h2>
       <div className="mt-6 space-y-4 w-full">
         <button
-          className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-500 flex items-center justify-center gap-2 font-medium"
+          className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-2 font-medium"
         >
-          <span className="inline-block h-5 w-5 bg-[url('logos:google-icon')] bg-cover"></span>
+          <Icon icon="logos:google-icon" className="h-5 w-5" />
           Google
         </button>
         <button
-          className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-500 flex items-center justify-center gap-2 font-medium"
+          className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-2 font-medium"
         >
-          <span className="inline-block h-5 w-5 bg-[url('mage:facebook')] bg-cover"></span>
+          <Icon icon="logos:facebook" className="h-5 w-5" />
           Facebook
         </button>
       </div>
@@ -115,11 +115,10 @@ const SignUp = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute inset-y-0 right-0 flex items-center pr-3"
               >
-                <span
-                  className={`inline-block h-5 w-5 bg-[url('${
-                    showPassword ? 'mdi:visibility' : 'mdi:visibility-off'
-                  }')] bg-cover text-gray-500`}
-                ></span>
+                <Icon
+                  icon={showPassword ? 'mdi:eye' : 'mdi:eye-off'}
+                  className="h-5 w-5 text-gray-500"
+                />
               </button>
             )}
           </div>
