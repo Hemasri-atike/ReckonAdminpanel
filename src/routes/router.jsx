@@ -16,15 +16,9 @@ const PageLoader = lazy(() => import('../components/loader/PageLoader.jsx'));
 const paths = {
   dashboard: '/dashboard',
   CareersPage: '/careers',
-  invoice: '/invoice',
-  schedule: '/schedule',
-  calendar: '/calendar',
-  messages: '/messages',
-  notification: '/notification',
-  settings: '/settings',
+ 
   signin: '/signin',
   signup: '/signup',
-  resetPassword: '/reset-password',
 };
 
 const rootPaths = {
@@ -52,7 +46,6 @@ const routes = [
           { index: true, element: <Dashboard /> },
           { path: paths.dashboard, element: <Dashboard /> },
           { path: paths.careers, element: <div className="p-4">Careers Page</div> },
-          { path: paths.invoice, element: <div className="p-4">Invoice Content</div> },
           { path: paths.schedule, element: <div className="p-4">Schedule Content</div> },
           { path: paths.calendar, element: <div className="p-4">Calendar Content</div> },
           { path: paths.messages, element: <div className="p-4">Messages Content</div> },

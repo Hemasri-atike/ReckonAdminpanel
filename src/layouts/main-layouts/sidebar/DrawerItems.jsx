@@ -69,22 +69,7 @@ const DrawerItems = ({ expand }) => {
         ))}
       </nav>
 
-      <div className="mt-auto px-3 pb-5">
-        <div className={`flex ${expand ? 'flex-row space-x-4' : 'flex-col space-y-4'} items-center justify-between`}>
-          <Link to="#!" className="flex items-center space-x-2 no-underline">
-            <div className="h-[50px] w-[50px] rounded-lg bg-blue-600 flex items-center justify-center text-white text-sm font-semibold">
-              EA
-            </div>
-            <div className={`${expand ? 'block' : 'hidden'}`}>
-              <p className="mb-0 text-sm font-bold text-gray-800">Easin Arafat</p>
-              <p className="mt-0 text-xs text-gray-400">Free Account</p>
-            </div>
-          </Link>
-          <Link to="#!" className="no-underline">
-            <Icon icon="majesticons:logout" className="h-6 w-6 text-gray-400" />
-          </Link>
-        </div>
-      </div>
+     
     </>
   );
 };
