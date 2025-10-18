@@ -4,7 +4,6 @@ import { Icon } from '@iconify/react';
 import LanguageSelect from './LanguageSelect';
 import ProfileMenu from './ProfileMenu';
 
-// Dummy base64-encoded transparent 40x40 PNG
 const dummyLogo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAH5X6OAAAAOUlEQVR42u3OIQEAAAgDoJ36/z8hXBwgpB4g4B8C/kPAXwg4C/kPAX8h4C8E/IWA/5DwFwL+QsBfwI4L6QvYx7F0wwAAAABJRU5ErkJggg==';
 
 const Topbar = ({ expand, mobileOpen, setExpand, setMobileOpen, drawerWidth, miniDrawerWidth }) => {

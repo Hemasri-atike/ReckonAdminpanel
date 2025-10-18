@@ -7,28 +7,9 @@ const menuItems = [
     title: 'View Profile',
     icon: 'mdi:user-circle-outline',
   },
+ 
   {
     id: 2,
-    title: 'Account Settings',
-    icon: 'mdi:account-cog-outline',
-  },
-  {
-    id: 3,
-    title: 'Notifications',
-    icon: 'mdi:bell-outline',
-  },
-  {
-    id: 4,
-    title: 'Switch Account',
-    icon: 'mdi:account-box-multiple-outline',
-  },
-  {
-    id: 5,
-    title: 'Help Center',
-    icon: 'mdi:help-circle-outline',
-  },
-  {
-    id: 6,
     title: 'Logout',
     icon: 'mdi:logout',
   },
