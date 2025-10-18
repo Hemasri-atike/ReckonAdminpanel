@@ -1,11 +1,14 @@
 import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes } from 'react-router-dom';
+import CareersPage from './pages/career/CareersPage'
 
 const App = () => {
   return (
-    <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-gray-500">Loading...</div>}>
-      <Outlet />
-    </Suspense>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/pages/career' element ={<CareersPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
