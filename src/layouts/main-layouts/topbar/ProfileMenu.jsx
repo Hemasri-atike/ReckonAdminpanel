@@ -1,5 +1,5 @@
+// src/components/ProfileMenu.jsx
 import { useState, useRef } from 'react';
-import Profile from 'assets/images/Profile.png';
 
 const menuItems = [
   {
@@ -50,17 +50,13 @@ const ProfileMenu = () => {
     <div className="relative">
       <button
         onClick={handleProfileClick}
-        className="ml-2 p-2 rounded-full bg-blue-600"
+        className="ml-2 p-2 rounded-full bg-blue-600 text-white text-sm font-semibold"
         aria-controls={open ? 'account-menu' : undefined}
         aria-expanded={open ? 'true' : undefined}
         aria-haspopup="true"
         ref={anchorRef}
       >
-        <img
-          src={Profile}
-          alt="Profile"
-          className="h-11 w-11 rounded-full object-cover"
-        />
+        EA
       </button>
 
       {open && (
@@ -73,11 +69,9 @@ const ProfileMenu = () => {
               onClick={handleProfileMenuClose}
               className="flex items-center px-4 py-2 cursor-pointer hover:bg-blue-100"
             >
-              <img
-                src={Profile}
-                alt="Profile"
-                className="h-[42px] w-[42px] rounded-full mr-2 object-cover"
-              />
+              <div className="h-[42px] w-[42px] rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-semibold mr-2">
+                EA
+              </div>
               <div className="flex flex-col">
                 <span className="text-sm font-semibold text-gray-800">Easin Arafat</span>
                 <span className="text-xs text-gray-500">easin@example.com</span>

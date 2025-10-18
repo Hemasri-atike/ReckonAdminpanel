@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from 'assets/images/Logo.png';
+// import Logo from 'assets/images/Logo.png';
 import LanguageSelect from './LanguageSelect';
 import ProfileMenu from './ProfileMenu';
 
@@ -21,7 +21,7 @@ const Topbar = ({ expand, mobileOpen, setExpand, setMobileOpen, drawerWidth, min
       <div className="px-4 py-2 flex items-center justify-between">
         <div className="flex items-center space-x-2 sm:space-x-3">
           <Link to="/" className="hidden sm:block lg:hidden no-underline">
-            <img src={Logo} alt="logo" className="h-10 w-10" />
+            {/* <img src={Logo} alt="logo" className="h-10 w-10" /> */}
           </Link>
 
           <div className="flex items-center">

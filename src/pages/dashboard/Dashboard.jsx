@@ -1,8 +1,8 @@
-import TopCards from 'components/sections/dashboard/top-cards';
-import Reports from 'components/sections/dashboard/reports';
-import Analytics from 'components/sections/dashboard/analytics';
-import RecentOrders from 'components/sections/dashboard/recent-orders';
-import TopSelling from 'components/sections/dashboard/top-selling';
+import TopCards from '../../components/sections/TopCards.jsx';
+import Reports from   "../../components/sections/Reports.jsx"
+import Analytics from '../../components/sections/Analytics.jsx';
+import RecentOrders from '../../components/sections/RecentOrders.jsx';
+import TopSelling from '../../components/sections/TopSelling.jsx';
 
 const Dashboard = () => {
   return (
