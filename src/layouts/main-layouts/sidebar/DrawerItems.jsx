@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import sitemap from '../../../routes/Sitemap.js';
 
-// Dummy base64-encoded transparent 44x44 PNG (matches h-11 w-11)
 const dummyLogo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAQAAAC0jP9AAAAARElEQVR42u3PAQ0AMAgAoJ36/z+0DhAQCg4BfxDwDwH/EOAfAv4h4B8C/iHgHwL+IeAfAv4h4B8C/iHgHwL+IeAfAv4h4B8C/gJ2X8jY0gAAAABJRU5ErkJggg==';
 
 const DrawerItems = ({ expand }) => {

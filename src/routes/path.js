@@ -8,7 +8,7 @@ const rootPaths = {
 
 export default {
   dashboard: '/dashboard',
-  analytics: `/${rootPaths.pageRoot}/analytics`,
+  careers: `/${rootPaths.pageRoot}/careers`,
   invoice: `/${rootPaths.pageRoot}/invoice`,
   schedule: `/${rootPaths.pageRoot}/schedule`,
   calendar: `/${rootPaths.pageRoot}/calendar`,

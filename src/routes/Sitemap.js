@@ -11,9 +11,9 @@ const sitemap = [
     messages: null,
   },
   {
-    id: 'analytics',
-    subheader: 'Analytics',
-    path: paths.analytics,
+    id: 'careers ',
+    subheader: 'Careers',
+    path: paths.careers,
     icon: 'solar:chart-square-bold',
     active: false,
     messages: null,
